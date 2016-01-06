@@ -22,82 +22,89 @@
 
     // Define the defaults used for all new cleditor instances
     defaultOptions: {
-      width:        500, // width not including margins, borders or padding
-      height:       250, // height not including margins, borders or padding
-      controls:     // controls to add to the toolbar
-                    "bold italic underline strikethrough subscript superscript | font size " +
-                    "style | color highlight removeformat | bullets numbering | outdent " +
-                    "indent | alignleft center alignright justify | undo redo | " +
-                    "rule image link unlink | cut copy paste pastetext | print source",
-      colors:       // colors in the color popup
-                    "FFF FCC FC9 FF9 FFC 9F9 9FF CFF CCF FCF " +
-                    "CCC F66 F96 FF6 FF3 6F9 3FF 6FF 99F F9F " +
-                    "BBB F00 F90 FC6 FF0 3F3 6CC 3CF 66C C6C " +
-                    "999 C00 F60 FC3 FC0 3C0 0CC 36F 63F C3C " +
-                    "666 900 C60 C93 990 090 399 33F 60C 939 " +
-                    "333 600 930 963 660 060 366 009 339 636 " +
-                    "000 300 630 633 330 030 033 006 309 303",    
-      fonts:        // font names in the font popup
-                    "Arial,Arial Black,Comic Sans MS,Courier New,Narrow,Garamond," +
-                    "Georgia,Impact,Sans Serif,Serif,Tahoma,Trebuchet MS,Verdana",
-      sizes:        // sizes in the font size popup
-                    "1,2,3,4,5,6,7",
-      styles:       // styles in the style popup
-                    [["Paragraph", "<p>"], ["Header 1", "<h1>"], ["Header 2", "<h2>"],
-                    ["Header 3", "<h3>"],  ["Header 4","<h4>"],  ["Header 5","<h5>"],
-                    ["Header 6","<h6>"]],
-      useCSS:       false, // use CSS to style HTML when possible (not supported in ie)
-      docType:      // Document type contained within the editor
-                    '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">',
-      docCSSFile:   // CSS file used to style the document contained within the editor
-                    "", 
-      bodyStyle:    // style to assign to document body contained within the editor
-                    "margin:4px; font:10pt Arial,Verdana; cursor:text"
+      width: 500, // width not including margins, borders or padding
+      height: 250, // height not including margins, borders or padding
+      controls: // controls to add to the toolbar
+        "bold italic underline strikethrough subscript superscript | font size " +
+        "style | color highlight removeformat | bullets numbering | outdent " +
+        "indent | alignleft center alignright justify | undo redo | " +
+        "rule image link unlink | cut copy paste pastetext | print source",
+      colors: // colors in the color popup
+        "FFF FCC FC9 FF9 FFC 9F9 9FF CFF CCF FCF " +
+        "CCC F66 F96 FF6 FF3 6F9 3FF 6FF 99F F9F " +
+        "BBB F00 F90 FC6 FF0 3F3 6CC 3CF 66C C6C " +
+        "999 C00 F60 FC3 FC0 3C0 0CC 36F 63F C3C " +
+        "666 900 C60 C93 990 090 399 33F 60C 939 " +
+        "333 600 930 963 660 060 366 009 339 636 " +
+        "000 300 630 633 330 030 033 006 309 303",
+      fonts: // font names in the font popup
+        "Arial,Arial Black,Comic Sans MS,Courier New,Narrow,Garamond," +
+        "Georgia,Impact,Sans Serif,Serif,Tahoma,Trebuchet MS,Verdana",
+      sizes: // sizes in the font size popup
+        "1,2,3,4,5,6,7",
+      styles: // styles in the style popup
+        [
+        ["Paragraph", "<p>"],
+        ["Header 1", "<h1>"],
+        ["Header 2", "<h2>"],
+        ["Header 3", "<h3>"],
+        ["Header 4", "<h4>"],
+        ["Header 5", "<h5>"],
+        ["Header 6", "<h6>"]
+      ],
+      useCSS: false, // use CSS to style HTML when possible (not supported in ie)
+      docType: // Document type contained within the editor
+        '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">',
+      docCSSFile: // CSS file used to style the document contained within the editor
+        "",
+      bodyStyle: // style to assign to document body contained within the editor
+        "margin:4px; font:10pt Arial,Verdana; cursor:text"
     },
 
-    // Define all usable toolbar buttons - the init string property is 
-    //   expanded during initialization back into the buttons object and 
+    // Define all usable toolbar buttons - the init string property is
+    //   expanded during initialization back into the buttons object and
     //   seperate object properties are created for each button.
     //   e.g. buttons.size.title = "Font Size"
     buttons: {
       // name,title,command,popupName (""=use name)
-      init:
-      "bold,,|" +
-      "italic,,|" +
-      "underline,,|" +
-      "strikethrough,,|" +
-      "subscript,,|" +
-      "superscript,,|" +
-      "font,,fontname,|" +
-      "size,Font Size,fontsize,|" +
-      "style,,formatblock,|" +
-      "color,Font Color,forecolor,|" +
-      "highlight,Text Highlight Color,hilitecolor,color|" +
-      "removeformat,Remove Formatting,|" +
-      "bullets,,insertunorderedlist|" +
-      "numbering,,insertorderedlist|" +
-      "outdent,,|" +
-      "indent,,|" +
-      "alignleft,Align Text Left,justifyleft|" +
-      "center,,justifycenter|" +
-      "alignright,Align Text Right,justifyright|" +
-      "justify,,justifyfull|" +
-      "undo,,|" +
-      "redo,,|" +
-      "rule,Insert Horizontal Rule,inserthorizontalrule|" +
-      "image,Insert Image,insertimage,url|" +
-      "link,Insert Hyperlink,createlink,url|" +
-      "unlink,Remove Hyperlink,|" +
-      "cut,,|" +
-      "copy,,|" +
-      "paste,,|" +
-      "pastetext,Paste as Text,inserthtml,|" +
-      "print,,|" +
-      "source,Show Source"
+      init: "bold,,|" +
+        "italic,,|" +
+        "underline,,|" +
+        "strikethrough,,|" +
+        "subscript,,|" +
+        "superscript,,|" +
+        "font,,fontname,|" +
+        "size,Font Size,fontsize,|" +
+        "style,,formatblock,|" +
+        "color,Font Color,forecolor,|" +
+        "highlight,Text Highlight Color,hilitecolor,color|" +
+        "removeformat,Remove Formatting,|" +
+        "bullets,,insertunorderedlist|" +
+        "numbering,,insertorderedlist|" +
+        "outdent,,|" +
+        "indent,,|" +
+        "alignleft,Align Text Left,justifyleft|" +
+        "center,,justifycenter|" +
+        "alignright,Align Text Right,justifyright|" +
+        "justify,,justifyfull|" +
+        "undo,,|" +
+        "redo,,|" +
+        "rule,Insert Horizontal Rule,inserthorizontalrule|" +
+        "image,Insert Image,insertimage,url|" +
+        "link,Insert Hyperlink,createlink,url|" +
+        "unlink,Remove Hyperlink,|" +
+        "cut,,|" +
+        "copy,,|" +
+        "paste,,|" +
+        "pastetext,Paste as Text,inserthtml,|" +
+        "print,,|" +
+        "source,Show Source"
     },
 
     // imagesPath - returns the path to the images folder
-    imagesPath: function() { return imagesPath(); }
+    imagesPath: function() {
+      return imagesPath();
+    }
 
   };
 
@@ -120,7 +127,7 @@
     return $result;
 
   };
-    
+
   //==================
   // Private Variables
   //==================
@@ -128,45 +135,45 @@
   var
 
   // Misc constants
-  BACKGROUND_COLOR = "backgroundColor",
-  BUTTON           = "button",
-  BUTTON_NAME      = "buttonName",
-  CHANGE           = "change",
-  CLEDITOR         = "cleditor",
-  CLICK            = "click",
-  DISABLED         = "disabled",
-  DIV_TAG          = "<div>",
-  TRANSPARENT      = "transparent",
-  UNSELECTABLE     = "unselectable",
+    BACKGROUND_COLOR = "backgroundColor",
+    BUTTON = "button",
+    BUTTON_NAME = "buttonName",
+    CHANGE = "change",
+    CLEDITOR = "cleditor",
+    CLICK = "click",
+    DISABLED = "disabled",
+    DIV_TAG = "<div>",
+    TRANSPARENT = "transparent",
+    UNSELECTABLE = "unselectable",
 
-  // Class name constants
-  MAIN_CLASS       = "cleditorMain",    // main containing div
-  TOOLBAR_CLASS    = "cleditorToolbar", // toolbar div inside main div
-  GROUP_CLASS      = "cleditorGroup",   // group divs inside the toolbar div
-  BUTTON_CLASS     = "cleditorButton",  // button divs inside group div
-  DISABLED_CLASS   = "cleditorDisabled",// disabled button divs
-  DIVIDER_CLASS    = "cleditorDivider", // divider divs inside group div
-  POPUP_CLASS      = "cleditorPopup",   // popup divs inside body
-  LIST_CLASS       = "cleditorList",    // list popup divs inside body
-  COLOR_CLASS      = "cleditorColor",   // color popup div inside body
-  PROMPT_CLASS     = "cleditorPrompt",  // prompt popup divs inside body
-  MSG_CLASS        = "cleditorMsg",     // message popup div inside body
+    // Class name constants
+    MAIN_CLASS = "cleditorMain", // main containing div
+    TOOLBAR_CLASS = "cleditorToolbar", // toolbar div inside main div
+    GROUP_CLASS = "cleditorGroup", // group divs inside the toolbar div
+    BUTTON_CLASS = "cleditorButton", // button divs inside group div
+    DISABLED_CLASS = "cleditorDisabled", // disabled button divs
+    DIVIDER_CLASS = "cleditorDivider", // divider divs inside group div
+    POPUP_CLASS = "cleditorPopup", // popup divs inside body
+    LIST_CLASS = "cleditorList", // list popup divs inside body
+    COLOR_CLASS = "cleditorColor", // color popup div inside body
+    PROMPT_CLASS = "cleditorPrompt", // prompt popup divs inside body
+    MSG_CLASS = "cleditorMsg", // message popup div inside body
 
-  // Test for ie
-  ie = $.browser.msie,
-  ie6 = /msie\s6/i.test(navigator.userAgent),
+    // Test for ie
+    ie = (detectIE() !== false),
+    ie6 = /msie\s6/i.test(navigator.userAgent),
 
-  // Test for iPhone/iTouch/iPad
-  iOS = /iphone|ipad|ipod/i.test(navigator.userAgent),
+    // Test for iPhone/iTouch/iPad
+    iOS = /iphone|ipad|ipod/i.test(navigator.userAgent),
 
-  // Popups are created once as needed and shared by all editor instances
-  popups = {},
+    // Popups are created once as needed and shared by all editor instances
+    popups = {},
 
-  // Used to prevent the document click event from being bound more than once
-  documentClickAssigned,
+    // Used to prevent the document click event from being bound more than once
+    documentClickAssigned,
 
-  // Local copy of the buttons object
-  buttons = $.cleditor.buttons;
+    // Local copy of the buttons object
+    buttons = $.cleditor.buttons;
 
   //===============
   // Initialization
@@ -176,7 +183,8 @@
   //   and create seperate object properties for each button.
   //   e.g. buttons.size.title = "Font Size"
   $.each(buttons.init.split("|"), function(idx, button) {
-    var items = button.split(","), name = items[0];
+    var items = button.split(","),
+      name = items[0];
     buttons[name] = {
       stripIndex: idx,
       name: name,
@@ -223,7 +231,7 @@
     var $group = $(DIV_TAG)
       .addClass(GROUP_CLASS)
       .appendTo($toolbar);
-    
+
     // Add the buttons to the toolbar
     $.each(options.controls.split(" "), function(idx, buttonName) {
       if (buttonName === "") return true;
@@ -245,7 +253,7 @@
 
       // Button
       else {
-        
+
         // Get the button definition
         var button = buttons[buttonName];
 
@@ -273,7 +281,7 @@
         if (button.popupName)
           createPopup(button.popupName, options, button.popupClass,
             button.popupContent, button.popupHover);
-        
+
       }
 
     });
@@ -295,7 +303,9 @@
 
     // Bind the window resize event when the width or height is auto or %
     if (/auto|%/.test("" + options.width + options.height))
-      $(window).resize(function() {refresh(editor);});
+      $(window).resize(function() {
+        refresh(editor);
+      });
 
     // Create the iframe and resize the controls
     refresh(editor);
@@ -308,30 +318,33 @@
 
   var fn = cleditor.prototype,
 
-  // Expose the following private functions as methods on the cleditor object.
-  // The closure compiler will rename the private functions. However, the
-  // exposed method names on the cleditor object will remain fixed.
-  methods = [
-    ["clear", clear],
-    ["disable", disable],
-    ["execCommand", execCommand],
-    ["focus", focus],
-    ["hidePopups", hidePopups],
-    ["sourceMode", sourceMode, true],
-    ["refresh", refresh],
-    ["select", select],
-    ["selectedHTML", selectedHTML, true],
-    ["selectedText", selectedText, true],
-    ["showMessage", showMessage],
-    ["updateFrame", updateFrame],
-    ["updateTextArea", updateTextArea]
-  ];
+    // Expose the following private functions as methods on the cleditor object.
+    // The closure compiler will rename the private functions. However, the
+    // exposed method names on the cleditor object will remain fixed.
+    methods = [
+      ["clear", clear],
+      ["disable", disable],
+      ["execCommand", execCommand],
+      ["focus", focus],
+      ["hidePopups", hidePopups],
+      ["sourceMode", sourceMode, true],
+      ["refresh", refresh],
+      ["select", select],
+      ["selectedHTML", selectedHTML, true],
+      ["selectedText", selectedText, true],
+      ["showMessage", showMessage],
+      ["updateFrame", updateFrame],
+      ["updateTextArea", updateTextArea]
+    ];
 
   $.each(methods, function(idx, method) {
     fn[method[0]] = function() {
-      var editor = this, args = [editor];
+      var editor = this,
+        args = [editor];
       // using each here would cast booleans into objects!
-      for(var x = 0; x < arguments.length; x++) {args.push(arguments[x]);}
+      for (var x = 0; x < arguments.length; x++) {
+        args.push(arguments[x]);
+      }
       var result = method[1].apply(editor, args);
       if (method[2]) return result;
       return editor;
@@ -352,11 +365,11 @@
   function buttonClick(e) {
 
     var editor = this,
-        buttonDiv = e.target,
-        buttonName = $.data(buttonDiv, BUTTON_NAME),
-        button = buttons[buttonName],
-        popupName = button.popupName,
-        popup = popups[popupName];
+      buttonDiv = e.target,
+      buttonName = $.data(buttonDiv, BUTTON_NAME),
+      button = buttons[buttonName],
+      popupName = button.popupName,
+      popup = popups[popupName];
 
     // Check if disabled
     if (editor.disabled || $(buttonDiv).attr(DISABLED) == DISABLED)
@@ -396,7 +409,9 @@
 
       // Enable or disable the toolbar buttons
       // IE requires the timeout
-      setTimeout(function() {refreshButtons(editor);}, 100);
+      setTimeout(function() {
+        refreshButtons(editor);
+      }, 100);
 
     }
 
@@ -500,8 +515,8 @@
   function popupClick(e) {
 
     var editor = this,
-        popup = e.data.popup,
-        target = e.target;
+      popup = e.data.popup,
+      target = e.target;
 
     // Check for message and prompt popups
     if (popup === popups.msg || $(popup).hasClass(PROMPT_CLASS))
@@ -509,22 +524,21 @@
 
     // Get the button info
     var buttonDiv = $.data(popup, BUTTON),
-        buttonName = $.data(buttonDiv, BUTTON_NAME),
-        button = buttons[buttonName],
-        command = button.command,
-        value,
-        useCSS = editor.options.useCSS;
+      buttonName = $.data(buttonDiv, BUTTON_NAME),
+      button = buttons[buttonName],
+      command = button.command,
+      value,
+      useCSS = editor.options.useCSS;
 
     // Get the command value
     if (buttonName == "font")
-      // Opera returns the fontfamily wrapped in quotes
+    // Opera returns the fontfamily wrapped in quotes
       value = target.style.fontFamily.replace(/"/g, "");
     else if (buttonName == "size") {
       if (target.tagName == "DIV")
         target = target.children[0];
       value = target.innerHTML;
-    }
-    else if (buttonName == "style")
+    } else if (buttonName == "style")
       value = "<" + target.tagName + ">";
     else if (buttonName == "color")
       value = hex(target.style.backgroundColor);
@@ -564,9 +578,9 @@
   //==================
 
   // checksum - returns a checksum using the Adler-32 method
-  function checksum(text)
-  {
-    var a = 1, b = 0;
+  function checksum(text) {
+    var a = 1,
+      b = 0;
     for (var index = 0; index < text.length; ++index) {
       a = (a + text.charCodeAt(index)) % 65521;
       b = (b + a) % 65521;
@@ -674,8 +688,7 @@
     if (disabled) {
       editor.$area.attr(DISABLED, DISABLED);
       editor.disabled = true;
-    }
-    else {
+    } else {
       editor.$area.removeAttr(DISABLED);
       delete editor.disabled;
     }
@@ -710,20 +723,24 @@
     }
 
     // Execute the command and check for error
-    var success = true, description;
+    var success = true,
+      description;
     if (ie && command.toLowerCase() == "inserthtml")
       getRange(editor).pasteHTML(value);
     else {
-      try { success = editor.doc.execCommand(command, 0, value || null); }
-      catch (err) { description = err.description; success = false; }
+      try {
+        success = editor.doc.execCommand(command, 0, value || null);
+      } catch (err) {
+        description = err.description;
+        success = false;
+      }
       if (!success) {
         if ("cutcopypaste".indexOf(command) > -1)
           showMessage(editor, "For security reasons, your browser does not support the " +
             command + " command. Try using the keyboard shortcut or context menu instead.",
             button);
         else
-          showMessage(editor,
-            (description ? description : "Error executing the " + command + " command."),
+          showMessage(editor, (description ? description : "Error executing the " + command + " command."),
             button);
       }
     }
@@ -763,7 +780,7 @@
     var m = /rgba?\((\d+), (\d+), (\d+)/.exec(s),
       c = s.split("");
     if (m) {
-      s = ( m[1] << 16 | m[2] << 8 | m[3] ).toString(16);
+      s = (m[1] << 16 | m[2] << 8 | m[3]).toString(16);
       while (s.length < 6)
         s = "0" + s;
     }
@@ -783,7 +800,7 @@
   // imagesPath - returns the path to the images folder
   function imagesPath() {
     var cssFile = "jquery.cleditor.css",
-        href = $("link[href$='" + cssFile +"']").attr("href");
+      href = $("link[href$='" + cssFile + "']").attr("href");
     return href.substr(0, href.length - cssFile.length) + "images/";
   }
 
@@ -799,7 +816,7 @@
       options = editor.options;
 
     // Remove the old iframe
-    if (editor.$frame) 
+    if (editor.$frame)
       editor.$frame.remove();
 
     // Create a new iframe
@@ -824,7 +841,9 @@
     // Work around for bug in IE which causes the editor to lose
     // focus when clicking below the end of the document.
     if (ie)
-      $doc.click(function() {focus(editor);});
+      $doc.click(function() {
+        focus(editor);
+      });
 
     // Load the content
     updateFrame(editor);
@@ -836,11 +855,11 @@
       // reset the selection just after the beforedeactivate event and just
       // before the beforeactivate event.
       $doc.bind("beforedeactivate beforeactivate selectionchange keypress", function(e) {
-        
+
         // Flag the editor as inactive
         if (e.type == "beforedeactivate")
           editor.inactive = true;
-        
+
         // Get rid of the bogus selection and flag the editor as active
         else if (e.type == "beforeactivate") {
           if (!editor.inactive && editor.range && editor.range.length > 1)
@@ -850,7 +869,7 @@
 
         // Save the selection when the editor is active
         else if (!editor.inactive) {
-          if (!editor.range) 
+          if (!editor.range)
             editor.range = [];
           editor.range.unshift(getRange(editor));
 
@@ -888,8 +907,8 @@
     $(function() {
 
       var $toolbar = editor.$toolbar,
-          $group = $toolbar.children("div:last"),
-          wid = $main.width();
+        $group = $toolbar.children("div:last"),
+        wid = $main.width();
 
       // Resize the toolbar
       var hgt = $group.offset().top + $group.outerHeight() - $toolbar.offset().top + 1;
@@ -952,17 +971,19 @@
         enabled = button.getEnabled(data);
         if (enabled === undefined)
           enabled = true;
-      }
-      else if (((inSourceMode || iOS) && button.name != "source") ||
-      (ie && (command == "undo" || command == "redo")))
+      } else if (((inSourceMode || iOS) && button.name != "source") ||
+        (ie && (command == "undo" || command == "redo")))
         enabled = false;
       else if (command && command != "print") {
         if (ie && command == "hilitecolor")
           command = "backcolor";
         // IE does not support inserthtml, so it's always enabled
         if (!ie || command != "inserthtml") {
-          try {enabled = queryObj.queryCommandEnabled(command);}
-          catch (err) {enabled = false;}
+          try {
+            enabled = queryObj.queryCommandEnabled(command);
+          } catch (err) {
+            enabled = false;
+          }
         }
       }
 
@@ -970,8 +991,7 @@
       if (enabled) {
         $elem.removeClass(DISABLED_CLASS);
         $elem.removeAttr(DISABLED);
-      }
-      else {
+      } else {
         $elem.addClass(DISABLED_CLASS);
         $elem.attr(DISABLED, DISABLED);
       }
@@ -1031,8 +1051,7 @@
       offset = $button.offset();
       left = --offset.left;
       top = offset.top + $button.height();
-    }
-    else {
+    } else {
       var $toolbar = editor.$toolbar;
       offset = $toolbar.offset();
       left = Math.floor(($toolbar.width() - $popup.width()) / 2) + offset.left;
@@ -1041,13 +1060,18 @@
 
     // Position and show the popup
     hidePopups();
-    $popup.css({left: left, top: top})
+    $popup.css({
+        left: left,
+        top: top
+      })
       .show();
 
     // Assign the popup button and click event handler
     if (button) {
       $.data(popup, BUTTON, button);
-      $popup.bind(CLICK, {popup: popup}, $.proxy(popupClick, editor));
+      $popup.bind(CLICK, {
+        popup: popup
+      }, $.proxy(popupClick, editor));
     }
 
     // Focus the first input element if any
@@ -1064,7 +1088,7 @@
 
   // updateFrame - updates the iframe with the textarea contents
   function updateFrame(editor, checkForChange) {
-    
+
     var code = editor.$area.val(),
       options = editor.options,
       updateFrameCallback = options.updateFrame,
@@ -1127,6 +1151,32 @@
       $(editor).triggerHandler(CHANGE);
     }
 
+  }
+
+  function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    if (msie > 0) {
+      // IE 10 or older => return version number
+      return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    }
+
+    var trident = ua.indexOf('Trident/');
+    if (trident > 0) {
+      // IE 11 => return version number
+      var rv = ua.indexOf('rv:');
+      return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+
+    var edge = ua.indexOf('Edge/');
+    if (edge > 0) {
+      // Edge (IE 12+) => return version number
+      return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+    }
+
+    // other browser
+    return false;
   }
 
 })(jQuery);
