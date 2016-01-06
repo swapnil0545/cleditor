@@ -1,0 +1,15 @@
+{
+  "name": "cleditor",
+  "homepage": "https://github.com/crusepartnership/cleditor",
+  "description": "",
+  "main": ["jquery.cleditor.js", "jquery.cleditor.css"],
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
