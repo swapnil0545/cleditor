@@ -1,6 +1,14 @@
 {
   "name": "cleditor-bower",
   "version": "1.4.5",
+  "main": [
+    "jquery.cleditor.js",
+    "jquery.cleditor.css"
+   ],
+    "keywords": [
+        "cleditor",
+        "cleditor-bower"
+    ],
   "authors": [
     "Swapnil-MediaWide <swapnil.mhaske@mediawide.com>"
   ],
@@ -14,5 +22,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+	  "jquery": "1.9.1 - 2"
+	}
 }
