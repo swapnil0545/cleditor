@@ -1,22 +1,18 @@
 {
-  "name": "cleditor",
-  "homepage": "https://github.com/swapnil0545/cleditor-bower",
-  "description": "",
-  "main": [
-    "jquery.cleditor.js",
-    "jquery.cleditor.css"
+  "name": "cleditor-bower",
+  "version": "1.4.5",
+  "authors": [
+    "Swapnil-MediaWide <swapnil.mhaske@mediawide.com>"
   ],
-  "moduleType": [],
+  "description": "",
+  "main": "",
   "license": "MIT",
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "jquery": "1.9.1 - 2"
-  },
-  "version": "1.4.5"
+  ]
 }
