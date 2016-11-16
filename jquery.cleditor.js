@@ -43,7 +43,7 @@
                           ["Header 6", "<h6>"]],
             useCSS: true, // use CSS to style HTML when possible (not supported in ie)
             docType:      // Document type contained within the editor
-                          '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">',
+                          '<!DOCTYPE HTML>',
             docCSSFile:   // CSS file used to style the document contained within the editor
                           "",
             bodyStyle:    // style to assign to document body contained within the editor
@@ -654,13 +654,13 @@
 
         // URL
         else if (popupName === "url") {
-            $popup.html('<label>Enter URL:<br /><input type="text" value="http://" style="width:200px" /></label><br /><input type="button" value="Submit" />');
+            $popup.html('<label>Enter URL:<br /><input id="txturlpopup" type="text" value="http://" style="width:200px" /></label><br /><input type="button" value="Submit" />');
             popupTypeClass = PROMPT_CLASS;
         }
 
         // Paste as Text
         else if (popupName === "pastetext") {
-            $popup.html('<label>Paste your content here:<br /><textarea rows="3" style="width:200px"></textarea></label><br /><input type="button" value="Submit" />');
+            $popup.html('<label>Paste your content here:<br /><textarea id="txtpastepopup" rows="3" style="width:200px"></textarea></label><br /><input type="button" value="Submit" />');
             popupTypeClass = PROMPT_CLASS;
         }
 
@@ -1111,6 +1111,8 @@
         // Focus the first input element if any
         setTimeout(function () {
             $popup.find(":text,textarea").eq(0).focus().select();
+            $("#txturlpopup").focus();
+			         $("#txtpastepopup").focus();
         }, 100);
 
     }
